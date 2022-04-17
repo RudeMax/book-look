@@ -1,0 +1,32 @@
+
+
+.Book-card {    
+    margin: 10px auto;
+    width: 80vw;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    &:hover {
+        transform: scale(1.01);
+        transition: 0.5s;
+    }   
+    &__cover {
+        width: 100px;
+        object-fit: cover;
+    }
+
+    &__description {
+        text-align: start;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        
+
+        &__info span {
+            font-weight: 600;
+            margin: 10px;
+        }
+    }
+}
+

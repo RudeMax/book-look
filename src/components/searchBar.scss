@@ -1,0 +1,16 @@
+@import "commonMixins.scss";
+
+.Search-bar {
+    &__form {
+        &__input {
+            padding: 8px;
+            margin: 5px 0;
+            width: 250px;
+            background: none;
+            border-radius: 5px;
+        }
+        &__btn {
+            @include button;
+        }
+    }
+}

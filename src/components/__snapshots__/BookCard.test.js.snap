@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookCard Matches snapshot 1`] = `
+<div
+  className="Book-card"
+>
+  <img
+    className="Book-card__cover"
+    src="noCover.jpeg"
+  />
+  <div
+    className="Book-card__description"
+  >
+    <h2
+      className="Book-card__description__title"
+    >
+      The Great Gatsby
+    </h2>
+    <div
+      className="Book-card__description__info"
+    >
+      <p>
+        Author: 
+        <span>
+          F. Scott Fitzgerald
+        </span>
+      </p>
+      <p>
+        Published: 
+        <span>
+          1925
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
+`;

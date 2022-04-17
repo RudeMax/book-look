@@ -1,0 +1,21 @@
+@import "commonMixins.scss";
+
+
+.Tool-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    margin: auto;
+
+    &__results {
+        margin: 10px 0;
+        &__number {
+            font-weight: 800;
+        }
+    }
+    
+    &__btn {
+        @include button;
+        margin: 2px;
+    }
+}
