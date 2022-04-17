@@ -2,7 +2,7 @@
   "name": "book-look",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://RudeMax.github.io/book-look",
+  "homepage": "https://RudeMax.github.io/books-look",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.1",
