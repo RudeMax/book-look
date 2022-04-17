@@ -25,7 +25,7 @@ export const fetchBooks = (data) => async (dispatch) => {
 	dispatch({ type: FETCH_BOOKS_REQUEST });
 	try {
 		const response = await Axios.get(
-			`http://openlibrary.org/search.json?q=${data}`
+			`https://openlibrary.org/search.json?q=${data}`
 		);
 		dispatch({ type: FETCH_BOOKS_SUCCESS, payload: response.data });
 	} catch (error) {
