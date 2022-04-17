@@ -29,20 +29,12 @@ function ToolsBar() {
 	};
 
 	const handleSortByAuthor = () => {
-		dispatch(sortBooksByAuthor(books.sort(sortByAuthor)));
-		console.log(books);
+		dispatch(sortBooksByAuthor(books.slice(0).sort(sortByAuthor)));
 	};
 
 	const handleSortByDate = () => {
-		dispatch(sortBooksByDate(books.sort(sortByDate)));
+		dispatch(sortBooksByDate(books.slice(0).sort(sortByDate)));
 	};
-
-	const test = [
-		{ ble: "sdfdsf", sdf: "fsdfsdf" },
-		{ ble: "sdfdsf", sdf: "fsdfsdf" },
-		{ ble: "sdfdsf", sdf: "fsdfsdf" },
-		{ ble: "sdfdsf", sdf: "fsdfsdf" },
-	];
 
 	return (
 		numberOfBooks && (
@@ -58,12 +50,6 @@ function ToolsBar() {
 					</button>
 					<button className="Tool-bar__btn" onClick={handleSortByDate}>
 						year
-					</button>
-					<button
-						className="Tool-bar__btn"
-						onClick={() => dispatch(sortBooksByAuthor(test))}
-					>
-						test
 					</button>
 				</div>
 			</div>

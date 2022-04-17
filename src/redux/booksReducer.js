@@ -21,7 +21,6 @@ export const booksReducer = (state = initState, action) => {
 				isSearching: true,
 			};
 		case FETCH_BOOKS_SUCCESS:
-			console.log("REDUCER:", action.payload.docs);
 			return {
 				...state,
 				isSearching: false,

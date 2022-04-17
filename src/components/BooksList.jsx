@@ -3,6 +3,7 @@ import BookCard from "./BookCard";
 import { useSelector } from "react-redux";
 import ToolsBar from "./ToolsBar";
 import Loader from "./Loader";
+import { v4 as uuidv4 } from "uuid";
 
 function BooksList() {
 	const books = useSelector((state) => state?.books);
@@ -16,7 +17,7 @@ function BooksList() {
 		<div>
 			<ToolsBar />
 			{books && books.length ? (
-				books.map((book) => <BookCard key={book.key} book={book} />)
+				books.map((book) => <BookCard key={uuidv4()} book={book} />)
 			) : (
 				<div>No results yet :(</div>
 			)}
