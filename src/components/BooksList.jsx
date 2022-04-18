@@ -6,13 +6,11 @@ import Loader from "./Loader";
 import { v4 as uuidv4 } from "uuid";
 
 function BooksList() {
-	const books = useSelector((state) => state?.books);
-	const isLoading = useSelector((state) => state?.isSearching);
+	const { books = [], isLoading = false } = useSelector((state) => state);
 
 	if (isLoading) {
 		return <Loader />;
 	}
-	console.log(books);
 	return (
 		<div>
 			<ToolsBar />

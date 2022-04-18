@@ -9,31 +9,29 @@ function ToolsBar() {
 	const books = useSelector((state) => state?.books);
 
 	const sortByAuthor = (a, b) => {
-		if (a.author_name > b.author_name) {
-			return 1;
-		} else if (b.author_name > a.author_name) {
-			return -1;
-		} else {
-			return 0;
-		}
+		return a.author_name?.[0]?.localeCompare?.(b.author_name?.[0]) || 0;
 	};
 
 	const sortByDate = (a, b) => {
-		if (a.first_publish_year > b.first_publish_year) {
-			return 1;
-		} else if (b.first_publish_year > a.first_publish_year) {
+		const date1 = a.first_publish_year || Infinity;
+		const date2 = b.first_publish_year || Infinity;
+
+		if (date1 < date2) {
 			return -1;
-		} else {
-			return 0;
 		}
+		if (date1 > date2) {
+			return 1;
+		}
+
+		return 0;
 	};
 
 	const handleSortByAuthor = () => {
-		dispatch(sortBooksByAuthor(books.slice(0).sort(sortByAuthor)));
+		dispatch(sortBooksByAuthor(books.sort(sortByAuthor)));
 	};
 
 	const handleSortByDate = () => {
-		dispatch(sortBooksByDate(books.slice(0).sort(sortByDate)));
+		dispatch(sortBooksByDate(books.sort(sortByDate)));
 	};
 
 	return (
